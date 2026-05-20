@@ -1,0 +1,62 @@
+# CLEMENCIA GARDEN
+
+
+## Source pour Scrapping
+
+https://voya-g.com/category/culture/
+
+## Prompts pour GeopoPerma+Tech
+
+### Prompt 1
+Analyse les 3 fichiers joints comme les briques d’un même projet mauricien : 
+1) cadre conceptuel géopolitique/permaculture, 
+2) blueprint opérationnel de ferme 3.0 pilotée par données, 
+3) dossier partenaire/investisseur Clemencia Garden.
+
+Ta mission :
+- fusionner ces documents en un dossier maître cohérent ;
+- repérer les doublons, contradictions, zones floues et surpromesses ;
+- distinguer clairement ce qui relève de la théorie, de l’opérationnel, du business model, de la gouvernance et du narratif ;
+- proposer une version réaliste, crédible et finançable pour Maurice.
+
+Livrables attendus :
+1. un résumé exécutif de 1 page ;
+2. une structure de dossier final en 8 à 12 sections ;
+3. une critique stratégique franche : forces, faiblesses, risques, angles morts ;
+4. un plan d’action sur 90 jours ;
+5. une liste des données minimum à collecter sur la ferme ;
+6. trois scénarios de positionnement :
+   - ferme maraîchère simple,
+   - ferme + seed library,
+   - ferme + média + data pilotage ;
+7. une recommandation finale argumentée sur le meilleur modèle à lancer en premier à Maurice.
+
+Contraintes :
+- rester réaliste ;
+- éviter le jargon startup creux ;
+- ne pas survendre l’IA ;
+- considérer que la production agricole réelle est le socle, et que la couche numérique doit rester frugale et utile ;
+- écrire en français clair, ton professionnel, critique et méthodique.
+
+Format :
+- titres nets ;
+- tableaux quand utile ;
+- phrases courtes ;
+- aucune flatterie ;
+- orientation décision.
+
+
+## Prompt 2
+
+À partir du dossier maître, conçois un modèle “mini-Farmerline mauricien” adapté à une micro-ferme pilote.
+
+Je ne veux pas une plateforme complexe. Je veux un système simple, progressif et frugal qui transforme des données agricoles de base en aide à la décision, preuve terrain et crédibilité partenaire.
+
+Produit :
+1. une architecture simple des données ;
+2. les 5 à 10 KPI les plus utiles ;
+3. les routines quotidiennes, hebdomadaires et mensuelles ;
+4. les agents IA les plus utiles au départ ;
+5. les outils minimaux recommandés ;
+6. les erreurs à éviter ;
+7. le chemin réaliste pour passer de ferme pilote à modèle duplicable.

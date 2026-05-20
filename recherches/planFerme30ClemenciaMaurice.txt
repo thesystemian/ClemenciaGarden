@@ -1,0 +1,334 @@
+# Blueprint Ferme 3.0 — Clemencia, Maurice
+
+Date: 29 avril 2026
+
+## Objet
+Ce document propose un blueprint opérationnel pour une exploitation maraîchère bio à Clemencia, conçue comme une **Ferme 3.0**: production réelle sur le terrain, avec une couche numérique frugale pour mieux décider, mieux tracer, mieux vendre et mieux scaler.
+
+Le principe central est simple: **la ferme reste agricole dans son coeur, la tech sert l'exécution**. À Maurice, ce positionnement est cohérent avec l'orientation publique vers une agriculture plus résiliente, plus innovante, plus productive et mieux outillée face au climat [web:12][web:30][web:22].
+
+## Vision
+Construire une petite exploitation maraîchère bio rentable et rigoureuse, capable de:
+- produire régulièrement;
+- documenter ses pratiques;
+- réduire les erreurs de décision;
+- suivre ses coûts et ses marges;
+- créer une base de données de ferme exploitable par des agents IA;
+- se rendre finançable, duplicable et présentable à un partenaire ou financeur.
+
+## Positionnement stratégique
+Le projet doit être formulé comme un système en trois étages:
+
+1. **Socle agricole** — sols, eau, rotations, fertilité, protection des cultures, calendrier cultural.
+2. **Socle économique** — débouchés, prix, paniers, restaurants, grossistes, cashflow, marge par culture.
+3. **Socle numérique** — collecte de données, automatisation, traçabilité, veille, aide à la décision.
+
+La priorité doit rester dans cet ordre. La couche numérique n'a de valeur que si elle améliore des décisions concrètes de culture, d'irrigation, de récolte, de vente ou de conformité [web:31][web:22].
+
+## Pourquoi Maurice est favorable
+Les éléments publics disponibles vont dans le sens de votre concept:
+- Le Budget 2025-2026 prévoit Rs 800 millions de soutien au secteur et met l'accent sur des pratiques agricoles innovantes et climate-resilient [web:12][web:30].
+- Un Food Resilience Scheme est annoncé pour l'agriculture en environnement contrôlé, incluant vertical farming, systèmes indoor et méthodes avancées de production [web:12][web:30].
+- L'intégration d'outils d'intelligence artificielle pour les PME de la production alimentaire est explicitement mentionnée [web:12][web:30].
+- La Mauritius Meteorological Services publie des services utiles à l'agriculture, dont bulletins agro-climatiques mensuels, prévisions saisonnières et météo régionale [web:22].
+- Le ministère maintient un cadre de bio farming et des dispositifs d'appui liés à l'agriculture organique et à la transition [web:24][web:32].
+
+## Hypothèse de départ
+Votre meilleure chance n'est pas de lancer une ferme très technologique dès le jour 1.
+Votre meilleure chance est de lancer une ferme simple, disciplinée, mesurée, puis d'ajouter progressivement la couche logicielle.
+
+En pratique, cela veut dire:
+- peu de cultures au départ;
+- peu de parcelles actives;
+- un journal cultural strict;
+- un suivi de vente basique mais propre;
+- des routines hebdomadaires fixes;
+- puis seulement après, des agents spécialisés.
+
+## Architecture cible
+
+### 1) Couche terrain
+C'est le système réel:
+- parcelles;
+- planches;
+- variétés;
+- dates de semis;
+- repiquage;
+- intrants;
+- arrosage;
+- incidents;
+- récoltes;
+- ventes.
+
+Sans cette couche correctement tenue, la couche numérique devient décorative.
+
+### 2) Couche données
+Chaque événement de terrain doit pouvoir devenir une donnée exploitable:
+- date;
+- culture;
+- parcelle;
+- quantité;
+- coût;
+- photo;
+- observation;
+- anomalie.
+
+Données externes à intégrer:
+- météo régionale;
+- bulletins agro-climatiques;
+- prévisions saisonnières;
+- informations sur schémas publics et appuis bio [web:22][web:24][web:32].
+
+### 3) Couche décision
+Cette couche transforme les données en action:
+- alerte pluie et récolte;
+- alerte chaleur et stress hydrique;
+- fenêtre favorable de semis;
+- suspicion de pression maladie;
+- baisse de marge sur une culture;
+- tension sur planning de récolte.
+
+### 4) Couche pilotage business
+C'est là que la ferme devient pilotable:
+- coût par culture;
+- marge brute par culture;
+- rendement par planche;
+- taux de perte;
+- délai moyen entre récolte et vente;
+- top clients;
+- prévision d'encaissement.
+
+## Les agents IA à construire
+Je recommande non pas un gros agent généraliste, mais **trois agents spécialisés**.
+
+### Agent 1 — Veille climat/agro
+Mission:
+- surveiller météo et climat agricole;
+- synthétiser les bulletins utiles;
+- signaler les risques opérationnels des 3 à 7 prochains jours.
+
+Entrées:
+- météo locale/régionale;
+- bulletins agro-climatiques Mauritius Meteorological Services [web:22];
+- observations terrain.
+
+Sorties:
+- briefing du matin;
+- alertes irrigation;
+- risque chaleur/pluie/vent;
+- créneaux de semis ou récolte.
+
+### Agent 2 — Veille marché/politique/réglementaire
+Mission:
+- suivre les aides;
+- surveiller les annonces utiles du ministère;
+- repérer appels, schémas, appuis bio, innovations, programmes de résilience.
+
+Entrées:
+- Budget/EDB [web:12][web:30];
+- pages du ministère [web:24];
+- dispositifs bio-farming [web:32][web:36].
+
+Sorties:
+- note hebdomadaire;
+- opportunités de financement;
+- échéances;
+- points de conformité;
+- changements de cadre pertinents.
+
+### Agent 3 — Copilote d'exploitation
+Mission:
+- transformer vos données internes en décisions concrètes.
+
+Entrées:
+- semis;
+- récoltes;
+- ventes;
+- coûts;
+- incidents;
+- temps de travail;
+- observations parcelle.
+
+Sorties:
+- cultures rentables / peu rentables;
+- parcelles à surveiller;
+- anomalies de rendement;
+- priorité du jour;
+- rapport hebdomadaire au partenaire.
+
+## Stack simple recommandée
+Ton idée Bash + Git + IA est pertinente si elle reste minimaliste.
+
+### Bash
+Usage recommandé:
+- automatiser l'import de fichiers;
+- normaliser les noms de parcelles;
+- sauvegarder les journaux;
+- générer un rapport quotidien;
+- lancer des scripts de collecte météo;
+- archiver photos et observations.
+
+### Git
+Usage recommandé:
+- versionner les SOP;
+- historiser le cahier cultural;
+- suivre les essais variétaux;
+- conserver les changements de protocole;
+- documenter les incidents et corrections.
+
+### IA / LLM
+Usage recommandé:
+- résumer les signaux utiles;
+- rédiger le briefing du jour;
+- classer les incidents;
+- comparer rendement réel vs attendu;
+- proposer questions de diagnostic.
+
+## Exemple de système minimal
+Le soir:
+- les données du jour sont ajoutées dans des fichiers simples CSV/Markdown;
+- un script Bash agrège météo + ventes + incidents;
+- l'agent produit un rapport court.
+
+Le matin:
+- vous lisez un briefing de 10 lignes;
+- vous savez quoi semer, irriguer, récolter, surveiller ou vendre en priorité.
+
+Exemple de sortie du matin:
+- pluie probable demain, récolter les feuilles aujourd'hui;
+- planche 4: stress hydrique probable;
+- tomate bloc B: humidité élevée, vigilance maladie;
+- laitue lot 2: marge plus faible que la semaine dernière;
+- relancer client restaurant X avant 10h.
+
+## Modèle de données minimal
+Je conseille de démarrer avec 7 tables ou fichiers seulement:
+
+1. `parcelles.csv`
+2. `cultures.csv`
+3. `semis_repiquage.csv`
+4. `intrants.csv`
+5. `observations.csv`
+6. `recoltes_ventes.csv`
+7. `meteo_journaliere.csv`
+
+Champs minimums à capturer:
+- date;
+- parcelle/planches;
+- culture/variété;
+- action;
+- quantité;
+- unité;
+- coût;
+- temps passé;
+- observation libre;
+- photo éventuelle.
+
+## KPIs à suivre
+Les KPI utiles au départ sont peu nombreux.
+
+### Agronomiques
+- taux de germination;
+- rendement par planche;
+- pertes avant vente;
+- fréquence des incidents sanitaires;
+- consommation d'eau estimée.
+
+### Économiques
+- chiffre d'affaires par culture;
+- marge brute par culture;
+- coût d'intrants par planche;
+- revenu par semaine;
+- délai moyen de vente.
+
+### Opérationnels
+- heures de travail par culture;
+- tâches en retard;
+- écart entre planifié et réalisé;
+- nombre d'alertes critiques.
+
+## Gouvernance entre vous deux
+C'est un point critique.
+
+Avant même les premiers semis, il faut écrire noir sur blanc:
+- qui apporte quoi;
+- à qui appartient quoi;
+- comment se partage la marge;
+- comment sont décidés les investissements;
+- qui tient les registres;
+- qui gère les ventes;
+- que se passe-t-il si l'un sort du projet.
+
+Une ferme casse souvent moins à cause de l'agronomie qu'à cause d'une gouvernance floue.
+
+## Feuille de route 90 jours
+
+### Jours 1 à 15
+- visiter et cartographier le terrain;
+- confirmer accès eau, topographie, vents, zones humides, accès véhicule;
+- choisir un nombre très limité de cultures de départ;
+- définir les débouchés cibles;
+- écrire un accord de collaboration simple;
+- créer le système de journalisation.
+
+### Jours 16 à 30
+- préparer premières planches;
+- installer routine de collecte de données;
+- lancer un modèle simple de coûts;
+- créer les fichiers standards;
+- mettre en place la veille météo/agro.
+
+### Jours 31 à 60
+- premiers cycles culturaux;
+- premières ventes tests;
+- revue hebdomadaire des pertes, efforts, marge;
+- ajustement des rotations et volumes;
+- création du briefing automatique quotidien.
+
+### Jours 61 à 90
+- stabiliser 2 à 4 cultures maximum;
+- mesurer rendement réel;
+- mesurer coût réel;
+- identifier culture locomotive et culture piège;
+- commencer l'agent copilote d'exploitation;
+- préparer dossier de présentation plus propre pour appui ou financement.
+
+## Ce que je déconseille
+- construire une usine logicielle avant la preuve terrain;
+- multiplier les cultures trop tôt;
+- se dire bio sans système de preuve;
+- scraper trop de sources non actionnables;
+- baser le projet sur la seule idée de “Maurice hub régional”;
+- confondre innovation et complexité.
+
+## Ce que je recommande très concrètement
+Si vous démarrez en mai-juin 2026, votre meilleur levier est probablement:
+- une ferme pilote petite;
+- une data discipline forte;
+- une veille météo/agro robuste;
+- une traçabilité bio sérieuse;
+- une boucle hebdomadaire d'apprentissage;
+- puis une montée en automatisation.
+
+## Positionnement final conseillé
+La formule de présentation la plus crédible me semble être:
+
+**"Exploitation maraîchère bio à Clemencia, pilotée par données, avec couche numérique frugale et agents spécialisés d'aide à la décision."**
+
+C'est plus sérieux, plus finançable et plus réaliste que “ferme full IA”.
+
+## Livrables que vous pouvez construire ensuite
+À partir de ce blueprint, vous pouvez produire:
+- un dossier partenaire/investisseur;
+- un prévisionnel 12 mois en MUR;
+- un cahier d'exploitation;
+- un système de fichiers Bash/Git prêt à l'emploi;
+- des prompts d'agents spécialisés;
+- un tableau de bord minimal.
+
+## Sources intégrées
+- Budget 2025-2026: soutien au secteur, agriculture innovante, Food Resilience Scheme, intégration d'outils IA [web:12][web:30]
+- Mauritius Meteorological Services: météo, bulletins agro-climatiques, prévisions saisonnières [web:22]
+- Ministry Bio Farming pages [web:24]
+- Bio-Farming Promotion Scheme Mauritius [web:32][web:36]
+- Climate/agriculture decision support rationale [web:31]
