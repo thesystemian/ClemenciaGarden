@@ -1,0 +1,31 @@
+{
+  "brand": {
+    "name": "Clemencia Garden",
+    "version": "1.2",
+    "created": "2026-05-21",
+    "owner": "Dax (@LeSystemien) + Kush",
+    "location": "Flacq, Maurice",
+    "vision": "IA-Driven Micro-Farm + B2B Consulting"
+  },
+  "colors": {
+    "primary": {"name": "Clemencia Green", "hex": "#a5c882", "rgb": "165, 200, 130", "usage": ["headers", "ctas", "logo_leaf"]},
+    "secondary": {"name": "Clemencia Tech Blue", "hex": "#3bb2f6", "rgb": "59, 178, 246", "usage": ["data_viz", "logo_circle"]},
+    "accent": {"name": "Clemencia Gold", "hex": "#ffd166", "rgb": "255, 209, 102", "usage": ["emphasis", "highlights"]},
+    "warm": {"name": "Clemencia Terracotta", "hex": "#cc5555", "rgb": "204, 85, 85", "usage": ["emotional_ctas", "warmth"]},
+    "neutral": {"name": "Clemencia Cream", "hex": "#faf3e0", "rgb": "250, 243, 224", "usage": ["backgrounds"]}
+  },
+  "typography": {
+    "heading": {"family": "Poppins", "weights": [600, 700], "usage": "All headers"},
+    "body": {"family": "Lato", "weights": [400, 700], "usage": "All body text"}
+  },
+  "logo": {
+    "name": "Clemencia Leaf + Nodes",
+    "leaf_color": "#a5c882",
+    "nodes_color": "#3bb2f6",
+    "style": "Minimaliste, modern, scalable"
+  },
+  "voice": {
+    "tone": ["Friendly", "Educational", "Data-backed"],
+    "personality": ["Authentic", "Accessible", "Innovative"]
+  }
+}
